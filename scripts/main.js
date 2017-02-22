@@ -6,12 +6,12 @@ function each(list, callback) {
 
 function filterBy (criteria) {
     //return a function that returns a Boolean value
-        //if 
+        //if
             //the data matches the filter value return true
-        //else 
+        //else
             //return false
     return function (data) {
-        return criteria === data.genre; 
+        return criteria === data.genre;
     };
 
 }

@@ -4,51 +4,51 @@ var list = document.getElementById('list');
 
 var listOfMovies = [
     {
-      name: 'joe1',
+      name: 'Airplane!',
       genre: 'comedy'
     },
     {
-      name: 'joe2',
+      name: 'The Conjuring',
       genre: 'horror'
     },
     {
-      name: 'joe3',
+      name: 'The Shawshank Redemption',
       genre: 'drama'
     },
     {
-      name: 'joe4',
+      name: 'An Inconvenient Truth',
       genre: 'documentary'
     },
     {
-      name: 'joe5',
+      name: 'Anchorman',
       genre: 'comedy'
     },
     {
-      name: 'joe6',
+      name: 'The Shining',
       genre: 'horror'
     },
     {
-      name: 'joe7',
+      name: 'Forrest Gump',
       genre: 'drama'
     },
     {
-      name: 'joe8',
+      name: 'March of the Penguins',
       genre: 'documentary'
     },
     {
-      name: 'joe9',
+      name: 'Dumb and Dumber',
       genre: 'comedy'
     },
     {
-      name: 'joe10',
+      name: 'The Blair Witch Project',
       genre: 'horror'
     },
     {
-      name: 'joe11',
+      name: "Schindler's List",
       genre: 'drama'
     },
     {
-      name: 'joe12',
+      name: 'Food, Inc.',
       genre: 'documentary'
     }
 ];
@@ -87,5 +87,3 @@ clearFilter.addEventListener('click', function(e) {
   emptyList(list);
   e.preventDefault();
 });
-
-
