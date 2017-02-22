@@ -1,4 +1,4 @@
-# JS Drill: Higher Order Functions
+# JS Drill: Movie Filters
 
 ## Notes
 ### SOFTWARE COMMANDMENT: Write the least amount of code possible. 
@@ -110,8 +110,7 @@ executor(Boolean)(0);
 
 ## Exercise
 
-//The goal is to filter a list of movies by a user-defined by a specific criteria
+1. Fork and clone the repo onto your local computer.
+2. Open index.html into your local browser, and try clicking the buttons. Nothing should happen.
+3. Your goal is to complete this movie filtering app. Go into `scripts/main.js` and read through the comments and fill in the code.
 
-Given a list of MOVIES
-
-~
