@@ -1,4 +1,7 @@
-## SOFTWARE COMMANDMENT: Write the least amount of code possible. 
+# JS Drill: Higher Order Functions
+
+## Notes
+### SOFTWARE COMMANDMENT: Write the least amount of code possible. 
 #### Why?
 
 #### To understand "Why" we must first understand a concept: Complexity.
@@ -9,7 +12,7 @@
 
 #### Answering yes, means the code is COMPLEX.
 
-Each line of code that you right increases complexity. 
+Each line of code that you write increases complexity. 
 
 &&
 
@@ -27,7 +30,7 @@ More space for bugs to hide
 
 ## A.
 
-~~~~
+```javascript
 var total = 0, count = 1; while (count <= 10) {
 
 total += count;
@@ -35,13 +38,13 @@ total += count;
 count += 1; }
 
 console.log(total);
-~~~~
+```
 
 ## B.
 
-~~~~
+```javascript
 console.log(sum(range(1, 10)));
-~~~~
+```
 
 
 ### A or B, which one is more likely to contain a bug? A.
@@ -54,20 +57,19 @@ console.log(sum(range(1, 10)));
 
 ### GIVEN A PROBLEM:
 
-Creating functional units that will be used to solve the problem. Easy to understand
-You must notice when a concept is begging to be abstracted into a new word
-Hide what no one cares to see. 
+- Creating functional units that will be used to solve the problem. Make it easy to understand.
+- You must notice when a concept is begging to be abstracted into a new word.
+- Hide what no one cares to see. 
 
+### Higher-Order Functions 
 
-## Higher-Order Functions 
-
-### Functions that operate on other functions, either by taking them as arguments or by returning them, are called higher-order functions
+#### Functions that operate on other functions, either by taking them as arguments or by returning them, are called higher-order functions
 
 #### Examples:
 
-Functions that create new functions.
+#### Functions that create new functions.
 
-~~~~
+```javascript
 function greaterThan(n) {
     return function(m) { 
         return m > n; 
@@ -81,14 +83,14 @@ console.log(greaterThan10(9));
 // → false
 console.log(greaterThan10(10));
 // → false
-~~~~
+```
 
-#### 1st function registers the returned function, defines variables of the returned function, given it’s args.
+###### 1st function registers the returned function, defines variables of the returned function, given it’s args.
 
 
-### Functions that change other functions.
+#### Functions that change other functions.
 
-~~~~
+```javascript
 function executor(f) { 
     return function(arg) {
         console.log("calling with", arg);
@@ -104,7 +106,7 @@ executor(Boolean)(0);
 
 // How is executor similar to greaterThan? 
 
-~~~~
+```
 
 ## Exercise
 
