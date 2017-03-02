@@ -63,7 +63,7 @@ console.log(sum(range(1, 10)));
 
 ### Higher-Order Functions 
 
-#### Functions that operate on other functions, either by taking them as arguments or by returning them, are called higher-order functions
+#### Functions that operate on other functions, by taking them as arguments or by returning them, are called higher-order functions
 
 #### Examples:
 
@@ -84,31 +84,70 @@ console.log(greaterThan10(9));
 console.log(greaterThan10(10));
 // → false
 ```
+#### Functions that operate on other functions, by taking them as arguments
 
-###### 1st function registers the returned function, defines variables of the returned function, given it’s args.
+In Javascript, a function is value, just like a number (1), string ('Phil'), Boolean (true), etc...
 
+All values, including functions can be stored in a variable as follows
+```
+/**
+ * Test if your input value is greater than 10.
+ * @param {number} a - a number
+ */
+var isGreaterThan10 = function(a) {
+    return a > 10;
+}```
 
-#### Functions that change other functions.
-
-```javascript
-function executor(f) { 
-    return function(arg) {
-        console.log("calling with", arg);
-        var val = f(arg);
-        console.log("called with", arg, "- got", val); 
-        return val;
-    }; 
+Once the function is stored in a variable you can either:
+1. Invoke the function
+/**
+ * Test if your input value is greater than 10.
+ * @param {number} a - a number
+ */
+```var isGreaterThan10 = function(a) {
+    return a > 10;
 }
 
-executor(Boolean)(0);
-// → calling with 0
-// → called with 0 - got false
+isGreaterThan10(1); // false
+```
+or, 2. pass the function as a parameter in a function
+/**
+ * Test if your input value is greater than 10.
+ * @param {number} a - a number
+ */```
 
-// How is executor similar to greaterThan? 
+var isGreaterThan10 = function(a) {
+    return a > 10;
+}
+
+// getListOfNumbers takes 
+
+/**
+ * Generates an array of numbers, which pass the test.
+ * @param {array} list - an array of numbers
+ * @param {function} test - a function that takes 1 parameter and returns a boolean.
+ */
+
+var getListOfNumbers = function(list, test) {
+    var output = [];
+    
+    for(var i = 0; i < list.length; i++) {
+        var listItem  = list[i];
+        var listItemPassedTest = test(listItem);
+        if(listItemPassedTest) {
+            output.push(listItem);
+        }
+    }
+
+    return output;
+}
+
+getListOfNumbers(isGreaterThan10, [1,2,3,10,222,1,2])
+// --> [10,222]
 
 ```
-
-## Exercise
+       
+## Exercise 
 
 1. Fork and clone the repo onto your local computer.
 2. Open index.html into your local browser, and try clicking the buttons. Nothing should happen.

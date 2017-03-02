@@ -1,32 +1,37 @@
+/**
+ * Iterates through the list and invokes the callback on each item in the list.
+ * @param {array} list - an array of numbers
+ * @param {function} callback - a function that takes 1 parameter and doesn't return anything
+ */
+
 function each(list, callback) {
-    /*
-    Write a function that iterates through the list and calls the callback on
-    each list item.
-    */
+  
 }
+
+/**
+ * Returns a function.
+ * @param {string} criteria - a string
+ */
 
 function filterBy (criteria) {
-    /*
-    return a function that returns a Boolean value
-      if
-        the data matches the filter value return true
-      else
-        return false
-    */
+    return function (data) {
+        return criteria === data.genre;
+    };
 
 }
+
+/**
+ * Returns a filtered array containing items that meet the criteria.
+ * @param {array} list - an array of movies(please see dont-touch.js for the list of movies)
+ * @param {function} fn - a function which takes 1 {string} argument and returns boolean a value
+ */
 
 function filter(list, fn) {
     var outputList = []; //Array of the values that "pass" the check
     each(list, function(value) {
-      /*
-      list is a list of data.
-      fn is a function that returns a boolean. You can think of the fn as a checking function.
-      Using each, iterate over each element in the list
-        if the list item passes the check:
-          then save the list item
-      */
+
+
+
     });
-    //Return all of the list items that pass the check
     return outputList;
 }
